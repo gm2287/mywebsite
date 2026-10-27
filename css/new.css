@@ -1,0 +1,112 @@
+
+        body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f7fb;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #34495e;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        .thumb {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .thumb img {
+            width: 260px;
+            height: auto;
+            border: 1px solid #ccc;
+            padding: 4px;
+            border-radius: 5px;
+            background: #fff;
+        }
+
+        .note {
+            color: #666;
+            font-size: 0.9em;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .toc {
+            background: #ecf0f1;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .toc ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .toc a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        article {
+            background: #fff;
+            padding: 20px 22px;
+            border: 1px solid #e1e7ef;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        dl {
+            background: #f9f9f9;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 15px 20px;
+        }
+
+        dt {
+            font-weight: bold;
+            color: #c0392b;
+            margin-top: 8px;
+        }
+
+        dd {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #2980b9;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }

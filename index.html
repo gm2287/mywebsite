@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首页</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="news.html">班级新闻</a></li>
+        <li><a href="#courses">本周课程</a></li>
+        <li><a href="#contact">联系我</a></li>
+      </ul>
+    </nav>
+
+    <h2>作业主页</h2>
+    <p>
+      这里是首页，请通过上方导航栏查看
+      <a href="#courses">本周课程安排</a> 与 <a href="news.html">班级新闻</a>。
+    </p>
+    <hr />
+
+    <!-- ============================================================
+     任务一：本周课程表（表格）
+     ============================================================ -->
+
+    <h2>一、本周课程表</h2>
+
+    <!-- TODO 2：给 <table> 加 <caption>，内容写「软件工程2班 课程表」
+            （caption 必须是 table 的第一个子元素） -->
+            <div class="container">
+    <table>
+      <caption>
+        软件工程2班 课程表
+      </caption>
+      <!-- TODO 3：把这一行表头用 <thead> 包起来，
+              并把里面的 <td> 全部改成 <th scope="col"> -->
+      <thead>
+        <tr>
+          <th scope="col">节次</th>
+          <th scope="col">星期一</th>
+          <th scope="col">星期二</th>
+          <th scope="col">星期三</th>
+          <th scope="col">星期四</th>
+        </tr>
+      </thead>
+
+      <!-- TODO 4：把下面两行数据用 <tbody> 包起来；
+              每行的第一个单元格（第12节/第34节）改成 <th scope="row"> -->
+      <tbody>
+        <tr>
+          <th scope="row">第12节</th>
+          <td>体育</td>
+          <td rowspan="2">数据结构</td>
+          <td>大学英语</td>
+          <td>Web编程基础</td>
+        </tr>
+        <tr>
+          <th scope="row">第34节</th>
+          <td>高等数学</td>
+          <td colspan="2">Web开发实验</td>
+        </tr>
+      </tbody>
+
+      <!-- TODO 5：合并单元格（两处都要做）
+              a) 把第一行数据里「数据结构」那个 td 改成跨两行：
+                 <td rowspan="2">数据结构</td>
+                 然后把第二行数据里对应的那个 <td>数据结构</td> 删掉
+              b) 把第二行数据里「高等数学」那个 td 改成跨两列：
+                 <td colspan="2">高等数学</td>
+                 然后把紧跟其后的 <td>数据结构</td> 删掉
+              ⚠ 数格子：表头 5 列 → 每行格子总数必须 = 5 -->
+
+      <!-- TODO 6：用 <tfoot> 加一行表尾，内容是「适用时间：2026~2027 学年第一学期」，
+              这一格要跨 5 列：<td colspan="5">……</td> -->
+      <tfoot>
+        <tr>
+          <td colspan="5">适用时间：2026~2027 学年第一学期</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- ============================================================
+     任务二：班级信息统计表（表格）
+     ============================================================ -->
+
+    <h2>二、班级信息统计</h2>
+
+    <!-- TODO 7：补全这张表，要求：
+              a) 有 <caption>：班级基本情况
+              b) 有 <thead>：三列表头 项目 / 人数 / 占比，用 <th scope="col">
+              c) 有 <tbody>：三行数据（总人数42 / 男生27 / 女生15 与对应占比），
+                 每行第一个格子用 <th scope="row">
+              d) 有 <tfoot>：一行说明，跨 3 列 -->
+    <table>
+      <caption>
+        班级基本情况
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">项目</th>
+          <th scope="col">人数</th>
+          <th scope="col">占比</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">总人数</th>
+          <td>42</td>
+          <td>100%</td>
+        </tr>
+        <tr>
+          <th scope="row">男生</th>
+          <td>27</td>
+          <td>64%</td>
+        </tr>
+        <tr>
+          <th scope="row">女生</th>
+          <td>15</td>
+          <td>36%</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">数据截至 2026 年 9 月</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- ============================================================
+     任务三：班级信息采集表单（表单）
+     ============================================================ -->
+
+    <h2>三、班级信息采集表单</h2>
+
+    <!-- TODO 8：method 已经写好，检查一下是不是 post；
+              action="#" 表示提交到当前页（课堂上不接后端，正常） -->
+    <form action="#" method="post">
+      <!-- ---------- 分组一：基本信息 ---------- -->
+      <fieldset>
+        <legend>基本信息</legend>
+
+        <!-- TODO 9：这一组要放 4 个控件，每个都要有 <label>
+      
+               ① 姓名：<input type="text" name="name" required>
+               ② 学号：10 位数字 → pattern="[0-9]{10}"，加 placeholder="10 位数字"，required
+               ③ 邮箱：用 HTML5 新类型 type="email"，required
+               ④ 入学日期：用 type="date"
+               写法两种都行：
+                 <label for="s-name">姓名：</label><input id="s-name" ...>
+               或 <label>姓名：<input ...></label> -->
+
+        <label for="s-name">姓名：</label>
+        <input id="s-name" type="text" name="name" required />
+        <label for="s-id">学号：</label>
+        <input
+          id="s-id"
+          type="text"
+          name="id"
+          pattern="[0-9]{10}"
+          placeholder="10 位数字"
+          required
+        />
+        <label for="s-email">邮箱：</label>
+        <input id="s-email" type="email" name="email" required />
+        <label for="s-date">入学日期：</label>
+        <input id="s-date" type="date" name="date" />
+      </fieldset>
+
+      <!-- ---------- 分组二：其他信息 ---------- -->
+      <fieldset>
+        <legend>其他信息</legend>
+
+        <!-- TODO 10：单选按钮（性别）
+                要求：两个 radio，name 必须相同才能互斥，其中一个加 checked -->
+
+        <!-- TODO 11：复选框（擅长方向）
+                要求：至少 3 个 checkbox，name 相同，value 各不相同 -->
+
+        <!-- TODO 12：下拉列表（班级）+ 多行文本 + 两个按钮
+                a) <select name="cls"> 里放 3 个 option，其中「软件工程2班」加 selected
+                b) <textarea name="msg" rows="3" cols="40"></textarea>
+                   注意：默认值写在标签内容里，不是 value 属性
+                c) 两个按钮，type 都要写：
+                   <button type="submit">提交报名</button>
+                   <button type="reset">重填</button> -->
+        <p>
+          性别：<input type="radio" name="gender" value="male" checked /> 男
+          <input type="radio" name="gender" value="female" /> 女
+        </p>
+        <p>
+          擅长方向： <input type="checkbox" name="skill" value="web" /> Web
+          <input type="checkbox" name="skill" value="java" /> Java
+          <input type="checkbox" name="skill" value="python" /> Python
+        </p>
+        <p>
+          班级：
+          <select name="cls">
+            <option value="se1" selected>软件工程1班</option>
+            <option value="se2">软件工程2班</option>
+            <option value="se3">软件工程3班</option>
+          </select>
+        </p>
+        <p>
+          备注：
+          <textarea name="msg" rows="3" cols="40">请填写您的备注信息</textarea>
+        </p>
+        <br />
+        <button type="submit">提交报名</button>
+        <button type="reset">重填</button>
+      </fieldset>
+    </form>
+            </div>
+  </body>
+</html>
