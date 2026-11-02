@@ -1,0 +1,30 @@
+    /* ===== 1. 全局 ===== */
+body {
+    font-family: "微软雅黑", Arial, sans-serif;
+    color: #333;
+    background: #f5f6f7;
+    line-height: 1.6;
+}
+
+/* 导航 */
+.nav {
+    list-style: none;            /* 去圆点 */
+    overflow: hidden;            /* 清浮动 */
+    padding-left: 0;
+}
+.nav li {
+    float: left;                 /* 横排 */
+    width: 120px;
+}
+.nav a {
+    display: block;              /* 整块可点 */
+    text-decoration: none;       /* 去下划线 */
+    text-align: center;
+    padding: 8px 0;
+    color: #333;
+}
+.nav a:link    { color: #333; }
+.nav a:visited { color: #555; }
+.nav a:hover   { background: #1e40af; color: #fff; }
+.nav a:active  { background: #16348f; color: #fff; }
+    
