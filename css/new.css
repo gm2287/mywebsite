@@ -1,47 +1,46 @@
+/* ============================================================
+   news.html · 三国快报样式表（css/new.css）
+   主题颜色已全部移除，恢复默认浅色配色；
+   本文件只负责新闻页版式：居中窄栏、卡片、目录、要点速览、页脚
+   加载顺序：common.css → index.css → new.css
+   ============================================================ */
+
+/* ===== 1. 版式：居中窄栏 ===== */
 body {
     font-family: "Microsoft YaHei", Arial, sans-serif;
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
     line-height: 1.8;
-    color: #333;
-    background: #f5f7fb;
 }
 
+/* 页首标题：与 index 一致（header#top 结构），颜色走默认 */
 h1 {
-    text-align: center;
-    color: #2c3e50;
-    border-bottom: 2px solid #2c3e50;
+    border-bottom: 3px solid #e2a75e;
     padding-bottom: 10px;
     margin-bottom: 25px;
 }
 
+/* 标题/导航浮动行的下方再开始正文 */
+.page-head {
+    clear: both;
+}
+
+/* 各条新闻标题：只补间距 */
 h2 {
-    color: #34495e;
-    border-left: 4px solid #3498db;
-    padding-left: 10px;
     margin-top: 30px;
 }
 
+/* ===== 2. 导航：默认配色 ===== */
+.nav a:link    { color: #333; }
+.nav a:visited { color: #555; }
+.nav a:hover   { background: #e2a75e; color: #fff; }
+.nav a:active  { background: #e2a75e; color: #fff; }
 
-.nav a:link {
-    color: #333;
-}
+/* 当前页（三国快报）常亮 */
+.nav .active a { background: #e2a75e; color: #fff; }
 
-.nav a:visited {
-    color: #555;
-}
-
-.nav a:hover {
-    background: #1e40af;
-    color: #fff;
-}
-
-.nav a:active {
-    background: #16348f;
-    color: #fff;
-}
-
+/* ===== 3. 头图：新闻配图（桃园结义卡通图） ===== */
 .thumb {
     display: block;
     text-align: center;
@@ -49,7 +48,8 @@ h2 {
 }
 
 .thumb img {
-    width: 260px;
+    width: 420px;
+    max-width: 100%;
     height: auto;
     border: 1px solid #ccc;
     padding: 4px;
@@ -64,6 +64,7 @@ h2 {
     margin-top: 10px;
 }
 
+/* ===== 4. 目录 ===== */
 .toc {
     background: #ecf0f1;
     padding: 15px 20px;
@@ -77,7 +78,7 @@ h2 {
 }
 
 .toc a {
-    color: #2980b9;
+    color: #e2a75e;
     text-decoration: none;
 }
 
@@ -85,6 +86,7 @@ h2 {
     text-decoration: underline;
 }
 
+/* ===== 5. 新闻正文卡片 ===== */
 article {
     background: #fff;
     padding: 20px 22px;
@@ -94,6 +96,7 @@ article {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
+/* ===== 6. 要点速览（时间/地点/花絮） ===== */
 dl {
     background: #f9f9f9;
     border: 1px solid #e5e7eb;
@@ -112,6 +115,7 @@ dd {
     color: #555;
 }
 
+/* ===== 7. 页脚 ===== */
 .footer {
     margin-top: 30px;
     padding-top: 15px;
@@ -120,7 +124,7 @@ dd {
 }
 
 .footer a {
-    color: #2980b9;
+    color: #e2a75e;
     text-decoration: none;
     margin: 0 10px;
 }

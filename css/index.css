@@ -1,0 +1,139 @@
+/* ============================================================
+   index.html · 交互与布局补充样式（css/index.css）
+   主题颜色已全部移除，页面配色回落到 common.css / style.css 的默认浅色；
+   本文件只保留：相册交互、全屏查看、投票区排版、返回顶部等功能性样式。
+   之后想重新配色，把颜色声明加回对应分区即可。
+   ============================================================ */
+
+/* ===== 大标题鎏金色（header 里的 h1，三个页面通用） ===== */
+header h1 {
+    color: #e2a75e;
+}
+
+/* ===== 2. 武将头像缩略图（沿用 .ph 尺寸与圆角） ===== */
+#album img.ph {
+    width: 100%;
+    height: 80px;
+    object-fit: cover; /* 保持图片比例、把 120×80 的小框填满、多余部分裁掉 */
+    object-position: 50% 15%;   /* 顶部往下 15% 的位置开始显示 */
+    display: block;
+}
+
+/* 鼠标悬停缩略图：微微提亮，暗示可点 */
+.zoom { display: block; }
+.zoom:hover img { filter: brightness(1.15); }
+
+/* ===== 3. 悬停大图：浮在缩略图上方 ===== */
+#album li { position: relative; }                 /* 作为预览图定位基准 */
+
+#album .preview {
+    display: none;                                /* 默认隐藏 */
+    position: absolute;
+    bottom: 100%;                                 /* 悬浮在缩略图上方 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: auto;
+    margin-bottom: 8px;
+    border: 2px solid #999;                       /* 中性灰描边 */
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    z-index: 50;
+    pointer-events: none;                         /* 不挡住缩略图点击 */
+}
+
+#album li:hover .preview { display: block; }      /* 悬停时浮现 */
+
+/* ===== 4. 点击全屏查看（纯 CSS :target，无需 JS） ===== */
+.viewer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.85);              /* 全屏暗幕（功能性，保证大图可读） */
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 网址带 #view-xxx 时显示对应武将 */
+.viewer:target { display: flex; }
+
+.viewer img {
+    max-width: 95vw;
+    max-height: 85vh;
+    object-fit: contain;
+    border: 2px solid #999;
+    border-radius: 6px;
+}
+
+.viewer figcaption {
+    margin-top: 12px;
+    color: #fff;                                  /* 暗幕上需要浅色文字才可读 */
+}
+
+.viewer a { color: #fff; margin-left: 10px; text-decoration: none; }
+.viewer a:hover { text-decoration: underline; }
+
+/* ===== 5. 武将人气投票区（覆盖 style.css 的横排样式） ===== */
+.order {
+    max-width: 920px;
+    margin: 20px auto;
+}
+
+.order label {
+    float: none;                        /* 取消 style.css 的左浮动 */
+    display: block;                     /* 独占一行 → 标签竖排在输入框上方 */
+    width: auto;
+    text-align: left;
+    margin-bottom: 4px;
+}
+
+.order .field { margin: 0 0 14px; }
+
+.order input,
+.order select {
+    float: none;                        /* 取消左浮动，改为文档流排列 */
+    width: 240px;
+    margin-left: 0;
+    padding: 6px 10px;
+}
+
+/* ===== 6. 返回顶部小按钮 ===== */
+.back-top {
+    text-align: center;
+    margin: 0 0 16px;
+}
+
+.back-top a {
+    display: inline-block;
+    padding: 5px 16px;
+    border: 1px solid #999;             /* 中性灰描边圆角胶囊 */
+    border-radius: 16px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.back-top a:hover { background: #e5e5e5; }
+
+/* ===== 7. 页首标题与导航并行展示 =====
+header#top {
+    float: left;                        标题靠左
+    margin: 10px 0 0 24px;
+}
+
+header#top h1 {
+    margin: 0;
+    padding-bottom: 6px;
+}
+
+nav {
+    float: right;                       导航靠右，与标题同一行
+    margin: 14px 24px 0 0;
+}
+
+.container { clear: both; }              版心从标题/导航这一行的下方开始 */

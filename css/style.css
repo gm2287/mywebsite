@@ -1,0 +1,326 @@
+/* ============================================================
+   实验六 · 起始样式表（css/style.css）
+   ------------------------------------------------------------
+   1–4 分区是第八章的成果，本次【不需要改动】；
+   今天只做 5、6 分区（TODO），并新增 7、8 分区。
+   ============================================================ */
+
+/* ===== 1. 全局 ===== */
+body {
+    font-family: "微软雅黑", Arial, sans-serif;
+    color: #333;
+    background: #f5f6f7;
+    line-height: 1.6;
+}
+/* 居中样式 */
+body {
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.8;
+}
+
+h1 {
+    color: #e2a75e;
+    border-bottom: 3px solid #e2a75e;
+    padding-bottom: 8px;
+}
+
+caption {
+    font-weight: bold;
+    padding: 6px 0;
+}
+
+/* ===== 2. 表格 ===== */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #bbb;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th {
+    background: #eef2f7;
+}
+
+tbody tr:nth-child(even) {
+    background: #fafbfc;
+}
+
+tfoot td {
+    color: #777;
+    font-size: 13px;
+}
+
+/* ===== 3. 版心卡片 ===== */
+.container {
+    width: 920px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+fieldset {
+    margin-bottom: 16px;
+    padding: 12px 16px;
+}
+
+/* ===== 4. 导航 ===== */
+.nav {
+    list-style: none;
+    overflow: hidden;
+    padding-left: 0;
+}
+
+.nav li {
+    float: left;
+    width: 120px;
+}
+
+.nav a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.nav a:link {
+    color: #333;
+}
+
+.nav a:visited {
+    color: #555;
+}
+
+.nav a:hover {
+    background: #e2a75e;
+    color: #fff;
+}
+
+.nav a:active {
+    background: #e2a75e;
+    color: #fff;
+}
+
+/* ===== 班级新闻news.html =====*/
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    min-height: 90vh;
+}
+
+h1 {
+    color: #e2a75e;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #dbe7fe;
+    margin: 12px 0 20px;
+}
+
+/* 目录：本页核心是锚点跳转 */
+.toc {
+    background: #f3f4f6;
+    border-left: 4px solid #e2a75e;
+    padding: 12px 20px;
+}
+
+.toc a {
+    color: #e2a75e;
+    text-decoration: none;
+    margin-right: 12px;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: #e2a75e;
+    margin-top: 40px;
+}
+
+article p {
+    line-height: 1.8;
+}
+
+/* 定义列表：dt 术语 + dd 描述 */
+dt {
+    font-weight: bold;
+    margin-top: 12px;
+    color: #111827;
+}
+
+dd {
+    margin: 4px 0 4px 24px;
+    line-height: 1.7;
+    color: #374151;
+}
+
+/* 图片链接（缩略图点击放大） */
+a.thumb img {
+    width: 240px;
+    height: 160px;
+    object-fit: cover;
+    border: 1px solid #cbd5e1;
+}
+
+.back {
+    margin-top: 48px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+.back a {
+    color: #e2a75e;
+    margin-right: 16px;
+}
+
+/* ===== 4.1 导航升级 ===== */
+.nav a {
+    display: block;
+    padding: 10px 0;
+    /* 热区变高，hover 才明显 */
+}
+
+.nav .active a {
+    /* 当前页常亮 */
+    background: #e2a75e;
+    color: #fff;
+}
+
+/* ============================================================
+   以下为第九章实验 TODO 区
+   ============================================================ */
+
+/* ===== 5. 电子相册 ===== */
+/* TODO B2：#album 去圆点 + 居中；li 行内块 + 定宽 + 顶对齐；
+   .ph 色块高 80px 圆角；ph1~ph8 八种底色；#album a 四态 */
+/* 在这里写代码 */
+/* ===== 5. 电子相册 ===== */
+#album {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    /* 让行内块整体居中 */
+}
+
+#album li {
+    display: inline-block;
+    /* 不脱流、能设宽高 */
+    width: 120px;
+    margin: 8px;
+    vertical-align: top;
+    /* 内容不齐时顶对齐 */
+}
+
+.ph {
+    /* "照片"色块 */
+    height: 80px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+}
+
+.ph1 {
+    background: #e2a75e;
+}
+
+.ph2 {
+    background: #059669;
+}
+
+.ph3 {
+    background: #dc2626;
+}
+
+.ph4 {
+    background: #d97706;
+}
+
+.ph5 {
+    background: #7c3aed;
+}
+
+.ph6 {
+    background: #0e7490;
+}
+
+.ph7 {
+    background: #be185d;
+}
+
+.ph8 {
+    background: #4d7c0f;
+}
+
+#album a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+#album a:visited {
+    color: #999;
+}
+
+#album a:hover {
+    color: #dc2626;
+}
+
+/* ===== 6. 参数表 ===== */
+/* TODO C：.spec 沿用全局表格线；thead 底色；tbody 悬停行 */
+/* 提示：全局 table 已有 collapse 和 td 边框，这里只补差异部分 */
+/* 在这里写代码 */
+.spec { border-collapse: collapse; width: 100%; }
+.spec th, .spec td { border: 1px solid #bbb; padding: 8px 12px; }
+.spec thead th { background: #eef2f7; }
+.spec tbody tr:nth-child(even) { background: #fafbfc; }
+.spec tbody tr:hover { background: #fff7e6; }   /* 悬停行 */
+
+/* ===== 7. 表单排版 ===== */
+/* TODO D：.order 行容器；label 浮动定宽右对齐；
+   input/select 定宽；:focus 高亮；submit 按钮三件套 */
+/* 在这里写代码 */
+.order { overflow: hidden; margin: 7px 0; }
+.order label {
+    float: left;
+    width: 80px;
+    text-align: right;        /* 冒号成一条竖线 */
+}
+.order input, .order select {
+    float: left;
+    width: 180px;
+    margin-left: 10px;
+}
+.order input:focus, .order select:focus {
+    background: #e7f1f3;
+    border: 1px solid #e2a75e;
+}
+form button[type="submit"] {
+    background: #e2a75e; color: #fff;
+    border: none; border-radius: 4px;
+    padding: 8px 20px; cursor: pointer;
+}
+form button[type="submit"]:hover { background: #e2a75e; }
+
+/* ===== 8. 主页布局 ===== */
+/* TODO E：main 左浮动 640px；aside 右浮动 220px + 底色圆角；
+   footer clear:both 居中 */
+/* 在这里写代码 */
+main { float: left;  width: 640px; }
+aside { float: right; width: 220px; background: #f0f4f8;
+        border-radius: 8px; padding: 12px; }
+footer { clear: both; text-align: center; color: #888;
+         padding: 16px 0; }

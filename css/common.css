@@ -25,6 +25,6 @@ body {
 }
 .nav a:link    { color: #333; }
 .nav a:visited { color: #555; }
-.nav a:hover   { background: #1e40af; color: #fff; }
-.nav a:active  { background: #16348f; color: #fff; }
+.nav a:hover   { background: #e2a75e; color: #fff; }
+.nav a:active  { background: #e2a75e; color: #fff; }
     

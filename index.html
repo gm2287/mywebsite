@@ -3,77 +3,373 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>个人主页</title>
+    <title>三国杀 · 武将志</title>
     <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
+    <header id="top"><h1>三国杀 · 武将志</h1></header>
+    <!-- 主页导航栏 -->
     <nav>
       <ul class="nav">
-        <li><a href="index.html">首页</a></li>
-        <li><a href="news.html">班级新闻</a></li>
-        <li><a href="#courses">本周课程</a></li>
-        <li><a href="class.html">班级主页</a></li>
+        <li class="active"><a href="index.html">首页</a></li>
+        <li><a href="hero.html">武将详情</a></li>
+        <li><a href="news.html">三国快报</a></li>
+        <li><a href="about.html">关于本站</a></li>
       </ul>
     </nav>
-    <p>
-      This is my html page. You can view my <a href="news.html">news</a> and <a href="class.html">class</a> pages.
+
+    <!-- 主体内容 -->
+    <div class="container">
+      <main>
+        <h2>关于《三国杀》</h2>
+        <p>
+          《三国杀》是杭州游卡（游卡桌游）于 2008
+          年推出的桌面卡牌游戏，以中国三国时期的历史为背景。玩家在游戏中扮演
+          主公、忠臣、反贼或内奸等身份，通过出牌和发动武将技能展开博弈，最终达成各自阵营的胜利条件。
+        </p>
+        <p>
+          游戏中的武将大多取材于真实的三国历史人物，技能设计也常与其历史典故相呼应：例如关羽的「武圣」取自其武艺超群，诸葛亮的「空城」取自空城计，貂蝉的「离间」则对应连环计。
+        </p>
+
+        <!-- 相册集，主体卡片部分 -->
+        <h2>著名武将图鉴</h2>
+        <ul id="album">
+          <li>
+            <a class="zoom" href="#view-caocao" title="点击查看大图">
+              <img
+                class="ph ph1"
+                src="images/hero-caocao.jpg"
+                alt="三国杀武将曹操形象"
+              />
+            </a>
+            <img
+              class="preview"
+              src="images/hero-caocao.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+            <a href="#hero-caocao">曹操 · 魏</a>
+          </li>
+          <li>
+            <a class="zoom" href="#view-liubei" title="点击查看大图">
+              <img
+                class="ph ph2"
+                src="images/hero-liubei.jpg"
+                alt="三国杀武将刘备形象"
+              />
+            </a>
+            <img
+              class="preview"
+              src="images/hero-liubei.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+            <a href="#hero-liubei">刘备 · 蜀</a>
+          </li>
+          <li>
+            <a class="zoom" href="#view-sunquan" title="点击查看大图">
+              <img
+                class="ph ph3"
+                src="images/hero-sunquan.jpg"
+                alt="三国杀武将孙权形象"
+              />
+            </a>
+            <img
+              class="preview"
+              src="images/hero-sunquan.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+            <a href="#hero-sunquan">孙权 · 吴</a>
+          </li>
+          <li>
+            <a class="zoom" href="#view-guanyu" title="点击查看大图">
+              <img
+                class="ph ph4"
+                src="images/hero-guanyu.jpg"
+                alt="三国杀武将关羽形象"
+              />
+            </a>
+            <img
+              class="preview"
+              src="images/hero-guanyu.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+            <a href="#hero-guanyu">关羽 · 蜀</a>
+          </li>
+          <li>
+            <a class="zoom" href="#view-zhugeliang" title="点击查看大图">
+              <img
+                class="ph ph5"
+                src="images/hero-zhugeliang.jpg"
+                alt="三国杀武将诸葛亮形象"
+              />
+            </a>
+            <img
+              class="preview"
+              src="images/hero-zhugeliang.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+            <a href="#hero-zhugeliang">诸葛亮 · 蜀</a>
+          </li>
+          <li>
+            <a class="zoom" href="#view-zhouyu" title="点击查看大图">
+              <img
+                class="ph ph6"
+                src="images/hero-zhouyu.jpg"
+                alt="三国杀武将周瑜形象"
+              />
+            </a>
+            <img
+              class="preview"
+              src="images/hero-zhouyu.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+            <a href="#hero-zhouyu">周瑜 · 吴</a>
+          </li>
+          <li>
+            <a class="zoom" href="#view-lvbu" title="点击查看大图">
+              <img
+                class="ph ph7"
+                src="images/hero-lvbu.jpg"
+                alt="三国杀武将吕布形象"
+              />
+            </a>
+            <img
+              class="preview"
+              src="images/hero-lvbu.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+            <a href="#hero-lvbu">吕布 · 群</a>
+          </li>
+          <li>
+            <a class="zoom" href="#view-diaochan" title="点击查看大图">
+              <img
+                class="ph ph8"
+                src="images/hero-diaochan.jpg"
+                alt="三国杀武将貂蝉形象"
+              />
+            </a>
+            <img
+              class="preview"
+              src="images/hero-diaochan.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+            <a href="#hero-diaochan">貂蝉 · 群</a>
+          </li>
+          <!-- 共 8 项：ph1~ph8 仅作加载时的势力底色 -->
+        </ul>
+
+        <!-- 点击放大：全屏查看层（纯 CSS :target 实现，无需 JS） -->
+        <figure class="viewer" id="view-caocao">
+          <img src="images/hero-caocao.jpg" alt="三国杀武将曹操形象" />
+          <figcaption>
+            曹操 · 魏 —— 魏武帝<a href="#album">关闭 ✕</a>
+          </figcaption>
+        </figure>
+        <figure class="viewer" id="view-liubei">
+          <img src="images/hero-liubei.jpg" alt="三国杀武将刘备形象" />
+          <figcaption>
+            刘备 · 蜀 —— 汉昭烈帝<a href="#album">关闭 ✕</a>
+          </figcaption>
+        </figure>
+        <figure class="viewer" id="view-sunquan">
+          <img src="images/hero-sunquan.jpg" alt="三国杀武将孙权形象" />
+          <figcaption>
+            孙权 · 吴 —— 东吴大帝<a href="#album">关闭 ✕</a>
+          </figcaption>
+        </figure>
+        <figure class="viewer" id="view-guanyu">
+          <img src="images/hero-guanyu.jpg" alt="三国杀武将关羽形象" />
+          <figcaption>
+            关羽 · 蜀 —— 美髯公<a href="#album">关闭 ✕</a>
+          </figcaption>
+        </figure>
+        <figure class="viewer" id="view-zhugeliang">
+          <img src="images/hero-zhugeliang.jpg" alt="三国杀武将诸葛亮形象" />
+          <figcaption>
+            诸葛亮 · 蜀 —— 卧龙<a href="#album">关闭 ✕</a>
+          </figcaption>
+        </figure>
+        <figure class="viewer" id="view-zhouyu">
+          <img src="images/hero-zhouyu.jpg" alt="三国杀武将周瑜形象" />
+          <figcaption>
+            周瑜 · 吴 —— 大都督<a href="#album">关闭 ✕</a>
+          </figcaption>
+        </figure>
+        <figure class="viewer" id="view-lvbu">
+          <img src="images/hero-lvbu.jpg" alt="三国杀武将吕布形象" />
+          <figcaption>吕布 · 群 —— 飞将<a href="#album">关闭 ✕</a></figcaption>
+        </figure>
+        <figure class="viewer" id="view-diaochan">
+          <img src="images/hero-diaochan.jpg" alt="三国杀武将貂蝉形象" />
+          <figcaption>
+            貂蝉 · 群 —— 绝世舞姬<a href="#album">关闭 ✕</a>
+          </figcaption>
+        </figure>
+      </main>
+      <!-- 侧边介绍栏 -->
+      <aside>
+        <h3>四大势力</h3>
+        <ul>
+          <li><span class="tag wei">魏</span>曹操、司马懿</li>
+          <li><span class="tag shu">蜀</span>刘备、关羽</li>
+          <li><span class="tag wu">吴</span>孙权、周瑜</li>
+          <li><span class="tag qun">群</span>吕布、貂蝉</li>
+        </ul>
+        <h3>站长</h3>
+        <p>马新朝 · 软件2650113班</p>
+        <p>2026325011338</p>
+        <h3>友情链接</h3>
+        <ul>
+          <li><a href="https://jw.huel.edu.cn/">校教务处</a></li>
+          <li><a href="https://lib.huel.edu.cn/">图书馆</a></li>
+          <li><a href="https://www.sanguosha.cn/">三国杀官网</a></li>
+        </ul>
+      </aside>
+
+      <table class="spec">
+        <caption>
+          三国杀 · 经典武将档案
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">武将</th>
+            <th scope="col">势力</th>
+            <th scope="col">称号</th>
+            <th scope="col">经典技能与历史典故</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="hero-caocao">
+            <th scope="row">曹操</th>
+            <td><span class="tag wei">魏</span></td>
+            <td>魏武帝</td>
+            <td>奸雄、护驾 —— 「宁教我负天下人」，挟天子以令诸侯的枭雄。</td>
+          </tr>
+          <tr id="hero-liubei">
+            <th scope="row">刘备</th>
+            <td><span class="tag shu">蜀</span></td>
+            <td>汉昭烈帝</td>
+            <td>仁德、激昂 —— 以仁义待人，三顾茅庐、白帝托孤的昭烈皇帝。</td>
+          </tr>
+          <tr id="hero-sunquan">
+            <th scope="row">孙权</th>
+            <td><span class="tag wu">吴</span></td>
+            <td>东吴大帝</td>
+            <td>制衡、救援 —— 据守江东、善于权衡各方势力的一代雄主。</td>
+          </tr>
+          <tr id="hero-guanyu">
+            <th scope="row">关羽</th>
+            <td><span class="tag shu">蜀</span></td>
+            <td>美髯公</td>
+            <td>武圣、忠义 —— 温酒斩华雄、千里走单骑，忠义的化身。</td>
+          </tr>
+          <tr id="hero-zhugeliang">
+            <th scope="row">诸葛亮</th>
+            <td><span class="tag shu">蜀</span></td>
+            <td>卧龙</td>
+            <td>观星、空城 —— 隆中对定天下三分，空城计吓退司马懿大军。</td>
+          </tr>
+          <tr id="hero-zhouyu">
+            <th scope="row">周瑜</th>
+            <td><span class="tag wu">吴</span></td>
+            <td>大都督</td>
+            <td>英姿、反间 —— 赤壁之战运筹帷幄，「曲有误，周郎顾」。</td>
+          </tr>
+          <tr id="hero-lvbu">
+            <th scope="row">吕布</th>
+            <td><span class="tag qun">群</span></td>
+            <td>飞将</td>
+            <td>无双 —— 三英战吕布，辕门射戟，「人中吕布，马中赤兔」。</td>
+          </tr>
+          <tr id="hero-diaochan">
+            <th scope="row">貂蝉</th>
+            <td><span class="tag qun">群</span></td>
+            <td>绝世舞姬</td>
+            <td>离间、闭月 —— 巧施连环计，离间董卓与吕布，除掉国贼。</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">技能名称以《三国杀》标准版为准 · v1.0</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <!-- 投票区：为您心仪的武将投上一票吧 -->
+    <!-- 武将人气投票：form 保证提交/重置按钮生效 -->
+    <form class="order" action="#" method="post">
+      <h2>武将人气投票</h2>
+
+      <p class="field">
+        <label for="s-name">姓名：</label>
+        <input
+          type="text"
+          id="s-name"
+          name="name"
+          placeholder="请输入您的姓名"
+          required
+        />
+      </p>
+
+      <p class="field">
+        <label for="s-id">学号：</label>
+        <input
+          id="s-id"
+          type="text"
+          name="id"
+          pattern="[0-9]{10}"
+          placeholder="请输入您的学号"
+          required
+        />
+      </p>
+
+      <p class="field">
+        <label for="s-hero">心属武将：</label>
+        <select id="s-hero" name="hero">
+          <optgroup label="魏国">
+            <option value="caocao">曹操</option>
+            <option value="simayi">司马懿</option>
+            <option value="guojia">郭嘉</option>
+          </optgroup>
+          <optgroup label="蜀国">
+            <option value="liubei">刘备</option>
+            <option value="guanyu">关羽</option>
+            <option value="zhugeliang">诸葛亮</option>
+          </optgroup>
+          <optgroup label="吴国">
+            <option value="sunquan">孙权</option>
+            <option value="zhouyu">周瑜</option>
+            <option value="huanggai">黄盖</option>
+          </optgroup>
+          <optgroup label="群雄">
+            <option value="lvbu">吕布</option>
+            <option value="diaochan">貂蝉</option>
+            <option value="huatuo">华佗</option>
+          </optgroup>
+        </select>
+      </p>
+
+      <p class="actions">
+        <button type="submit">提交投票</button>
+        <button type="reset">重填</button>
+      </p>
+    </form>
+
+    <!-- 返回顶部 -->
+    <p class="back-top">
+      <a href="#top">返回顶部 ↑</a>
     </p>
 
-     <!-- 1. 主标题 -->
-    <h1>个人名片</h1>
-    
-    <hr>
-
-    <!-- 2. 二级标题与段落 -->
-    <h2>个人简介</h2>
-    <!-- 段落 1 -->
-    <p>姓名：<strong>马新朝</strong></p>
-    <!-- 来自 <em>河南南阳</em> -->
-    <p>籍贯：<strong>China</strong></p>
-    <p>专业：<strong>软件工程</strong></p>
-    <p>学号：<strong>2026325011338</strong></p>
-
-    <!-- 3. 三级标题 -->
-    <h3>学习与爱好</h3>
-    <!-- 段落 2 -->
-    <p>运动方面喜欢 <em>羽毛球</em> 和 <em>游泳</em></p>
-    <p>在学业方面，我对 <strong>Web前端开发</strong> 和 <em>Linux系统</em> 有着浓厚的兴趣</p>
-    <!-- 区块分隔：学习目标 -->
-    <h2>新学期目标</h2>
-    <!-- 段落 3 -->
-    <p>步入新学期，我为自己设定了 <strong>Version <sup>1.0</sup></strong> 计划。我希望能在本学期掌握前端核心基础知识，并在期末时交出一份满意的 <em>Web 项目</em>。</p>
-
-    <hr>
-
-    <!-- 区块分隔：人生格言 -->
-    <h2>我的座右铭</h2>
-    <!-- 10. 使用 blockquote 展示格言 -->
-    <blockquote>
-        “想到和得到，中间还有个做到！”
-    </blockquote>
-
-    <hr>
-
-    <!-- 区块分隔：联系方式 -->
-    <h2>联系方式</h2>
-    <!-- 7. 使用 address 添加联系方式 -->
-    <address>
-        <p>电话：<strong>12345678901</strong></p>
-        <p>邮箱：<em>1111@qq.com</em></p>
-        <p>宿舍：<strong>99-99-99</strong></p>
-    </address>
-
-    <hr>
-
-    <!-- 加分项：版权信息、删除线 -->
-    <footer>
-        <!-- 使用 del 展示已删除信息 -->
-        <p><del>新的风暴已经出现，怎么能够停滞不前</del></p>
-        <!-- 使用 &copy; 添加版权信息 -->
-        <p>&copy; 2026 马新朝 保留所有权利</p>
-    </footer>
-
-    
+    <footer><p>&copy; 2026 马新朝 · Web编程基础课程作品</p></footer>
   </body>
 </html>
