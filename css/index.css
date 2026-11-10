@@ -86,13 +86,13 @@ header h1 {
 }
 
 .order label {
-    float: none;                        /* 取消 style.css 的左浮动 */
-    display: block;                     /* 独占一行 → 标签竖排在输入框上方 */
-    width: auto;
-    text-align: left;
-    margin-bottom: 4px;
+    display: inline-block;  /* 从「独占一行」改成「行内」 */
+    margin-bottom: 0;       /* 删掉原来的下间距 */
+    margin-right: 10px;     /* 补一个右间距 */
+    vertical-align: middle; /* 与输入框垂直居中 */
+    width: 80px; 
+    text-align: right;      /* 冒号成一条竖线 */
 }
-
 .order .field { margin: 0 0 14px; }
 
 .order input,
@@ -119,21 +119,3 @@ header h1 {
 }
 
 .back-top a:hover { background: #e5e5e5; }
-
-/* ===== 7. 页首标题与导航并行展示 =====
-header#top {
-    float: left;                        标题靠左
-    margin: 10px 0 0 24px;
-}
-
-header#top h1 {
-    margin: 0;
-    padding-bottom: 6px;
-}
-
-nav {
-    float: right;                       导航靠右，与标题同一行
-    margin: 14px 24px 0 0;
-}
-
-.container { clear: both; }              版心从标题/导航这一行的下方开始 */
